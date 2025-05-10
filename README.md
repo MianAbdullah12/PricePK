@@ -9,10 +9,11 @@ Firebase database is used to save data related to the  Category and product.
 User Report Section, Scanner, Offers, and Help are in the User Panel.
 Admin just send a Message, add a Category, and add a product.
 Google Authentication is used.
-*Tools are used for this Application.*
 
+*Tools are used for this Application.*
 1) Android Studio.
 2) Firebade.
+
 *Language*
 1) Java
 2) XML
