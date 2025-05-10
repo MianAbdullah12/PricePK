@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    android:fitsSystemWindows="true"
+    tools:context=".AdminPage">
+
+    <!-- Main Content -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="true">
+
+        <!-- Top Bar -->
+        <LinearLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:background="#6B404040"
+            android:orientation="horizontal"
+            android:padding="10dp">
+            <ImageView
+                android:id="@+id/profile_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="Profile"
+                android:onClick="toggleDrawer"
+                android:src="@drawable/ic_small"
+                tools:ignore="OnClick,TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="Search Products"
+                android:textColor="#7DD5AD" />
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="Search"
+                android:src="@drawable/ic_search_24" />
+        </LinearLayout>
+
+        <!-- Main Body -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="576dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="60dp"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <!-- Left Category List -->
+            <ScrollView
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                tools:ignore="SpeakableTextPresentCheck">
+
+                <LinearLayout
+                    android:id="@+id/category_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp" />
+            </ScrollView>
+
+            <!-- Product RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/product_recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="8dp"
+                app:itemIconTint="@color/bottom_nav_selector" />
+        </LinearLayout>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottmAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            app:fabAlignmentMode="center"
+            app:fabAnchorMode="cradle"
+            app:fabCradleMargin="14dp"
+            app:fabCradleRoundedCornerRadius="6dp"
+            android:backgroundTint="#6B404040"
+            app:fabCradleVerticalOffset="16dp"
+            android:fitsSystemWindows="true"
+            tools:ignore="VisualLintBottomAppBar"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scanner"
+            app:layout_anchor="@id/bottmAppBar"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:backgroundTint="@color/white"
+            app:itemIconTint="@color/bottom_nav_selector"
+            android:fitsSystemWindows="true" />
+
+        <!-- FAB for Adding New Category -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_category_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/white"
+            android:fitsSystemWindows="true"
+            android:src="@android:drawable/ic_input_add"
+            app:tint="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!-- FAB for Adding New Product -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_product_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/white"
+            android:fitsSystemWindows="true"
+            android:src="@android:drawable/ic_menu_add"
+            app:tint="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/profile_menu"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/background_drawer"
+        app:headerLayout="@layout/nav_header_admin" />
+</androidx.drawerlayout.widget.DrawerLayout>

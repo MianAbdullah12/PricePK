@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background_gradient"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/admin_logo"
+        android:layout_width="209dp"
+        android:layout_height="106dp"
+        android:contentDescription="Admin Logo"
+        android:scaleType="centerInside"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:gravity="center"
+        android:text="Fair Prices, No Fraud"
+        android:textColor="#090F0E"
+        android:textSize="24sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="www.Pricepk.com"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+</LinearLayout>

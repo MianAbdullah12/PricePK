@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "581830374395",
+    "firebase_url": "https://pricepk-e6dac-default-rtdb.firebaseio.com",
+    "project_id": "pricepk-e6dac",
+    "storage_bucket": "pricepk-e6dac.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581830374395:android:eafcd4bf76f31fb7e7d15e",
+        "android_client_info": {
+          "package_name": "com.example.pricepk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581830374395-fbtmoi3vq7krobfns05dh2e70qnjfct5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_Dy0Jfh3YCHd-TjZ95DmmPGhJUM3cyag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581830374395-fbtmoi3vq7krobfns05dh2e70qnjfct5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
