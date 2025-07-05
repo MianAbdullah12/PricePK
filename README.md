@@ -7,12 +7,12 @@ But users make Multiple accounts in that application.
 Firebase is used for the user account and the Admin Account.
 Firebase database is used to save data related to the  Category and product. 
 User Report Section, Scanner, Offers, and Help are in the User Panel.
-Admin just send a Message, add a Category, and add a product.
+Admin just sends a Message, add a Category, and add a product.
 Google Authentication is used.
 
 *Tools are used for this Application.*
 1) Android Studio.
-2) Firebade.
+2) Firebase.
 
 *Language*
 1) Java
